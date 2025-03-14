@@ -2967,7 +2967,7 @@ name = "chain-spec-guide-runtime"
 version = "0.0.0"
 dependencies = [
  "cmd_lib",
- "docify",
+ "docify 0.4.1",
  "frame-support",
  "pallet-balances",
  "pallet-sudo",
@@ -4619,7 +4619,7 @@ dependencies = [
  "cumulus-primitives-proof-size-hostfunction",
  "cumulus-primitives-storage-weight-reclaim",
  "derive-where",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -4758,7 +4758,7 @@ dependencies = [
  "cumulus-primitives-core",
  "cumulus-primitives-proof-size-hostfunction",
  "cumulus-test-runtime",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -5601,7 +5601,16 @@ version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a772b62b1837c8f060432ddcc10b17aae1453ef17617a99bc07789252d2a5896"
 dependencies = [
- "docify_macros",
+ "docify_macros 0.2.9",
+]
+
+[[package]]
+name = "docify"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bff55a6155fef558216361d920106abd26d6235a80830b881c656a85eb021981"
+dependencies = [
+ "docify_macros 0.4.1",
 ]
 
 [[package]]
@@ -5617,6 +5626,27 @@ dependencies = [
  "quote 1.0.38",
  "regex",
  "syn 2.0.98",
+ "termcolor",
+ "toml 0.8.19",
+ "walkdir",
+]
+
+[[package]]
+name = "docify_macros"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e79a94eab471940a3ae1b644869c8b39e57a7f15b4e004c54b57894632e26b02"
+dependencies = [
+ "common-path",
+ "derive-syn-parse",
+ "git2",
+ "once_cell",
+ "proc-macro2 1.0.93",
+ "quote 1.0.38",
+ "regex",
+ "sha2 0.10.8",
+ "syn 2.0.98",
+ "tempfile",
  "termcolor",
  "toml 0.8.19",
  "walkdir",
@@ -6711,7 +6741,7 @@ version = "0.1.0"
 dependencies = [
  "array-bytes",
  "const-hex",
- "docify",
+ "docify 0.4.1",
  "frame-metadata 20.0.0",
  "frame-support",
  "frame-system",
@@ -6779,7 +6809,7 @@ dependencies = [
  "assert_matches",
  "binary-merkle-tree",
  "bitflags 1.3.2",
- "docify",
+ "docify 0.4.1",
  "environmental",
  "frame-metadata 20.0.0",
  "frame-support-procedural",
@@ -6824,7 +6854,7 @@ dependencies = [
  "Inflector",
  "cfg-expr",
  "derive-syn-parse",
- "docify",
+ "docify 0.4.1",
  "expander",
  "frame-support",
  "frame-support-procedural-tools",
@@ -6934,7 +6964,7 @@ version = "28.0.0"
 dependencies = [
  "cfg-if",
  "criterion",
- "docify",
+ "docify 0.4.1",
  "frame-support",
  "log",
  "parity-scale-codec",
@@ -6969,7 +6999,7 @@ dependencies = [
 name = "frame-system-rpc-runtime-api"
 version = "26.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "parity-scale-codec",
  "sp-api 26.0.0",
 ]
@@ -7314,6 +7344,8 @@ dependencies = [
  "libc",
  "libgit2-sys",
  "log",
+ "openssl-probe",
+ "openssl-sys",
  "url",
 ]
 
@@ -9094,7 +9126,9 @@ checksum = "e1a117465e7e1597e8febea8bb0c410f1c7fb93b1e1cddf34363f8390367ffec"
 dependencies = [
  "cc",
  "libc",
+ "libssh2-sys",
  "libz-sys",
+ "openssl-sys",
  "pkg-config",
 ]
 
@@ -9623,6 +9657,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "libssh2-sys"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "220e4f05ad4a218192533b300327f5150e809b54c4ec83b5a1d91833601811b9"
+dependencies = [
+ "cc",
+ "libc",
+ "libz-sys",
+ "openssl-sys",
+ "pkg-config",
+ "vcpkg",
+]
+
+[[package]]
 name = "libz-sys"
 version = "1.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10092,7 +10140,7 @@ name = "minimal-template-node"
 version = "0.0.0"
 dependencies = [
  "clap 4.5.13",
- "docify",
+ "docify 0.4.1",
  "futures",
  "futures-timer",
  "jsonrpsee",
@@ -11401,7 +11449,7 @@ name = "pallet-bags-list"
 version = "27.0.0"
 dependencies = [
  "aquamarine",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
@@ -11447,7 +11495,7 @@ dependencies = [
 name = "pallet-balances"
 version = "28.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -11715,7 +11763,7 @@ dependencies = [
 name = "pallet-collective"
 version = "28.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -12061,7 +12109,7 @@ dependencies = [
 name = "pallet-example-authorization-tx-extension"
 version = "1.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -12150,7 +12198,7 @@ dependencies = [
 name = "pallet-example-single-block-migrations"
 version = "0.0.1"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-executive",
  "frame-support",
  "frame-system",
@@ -12233,7 +12281,7 @@ dependencies = [
 name = "pallet-fast-unstake"
 version = "27.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-election-provider-support",
  "frame-support",
@@ -12420,7 +12468,7 @@ name = "pallet-migrations"
 version = "1.0.0"
 dependencies = [
  "cfg-if",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-executive",
  "frame-support",
@@ -12686,7 +12734,7 @@ dependencies = [
 name = "pallet-paged-list"
 version = "0.6.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-support",
  "frame-system",
  "parity-scale-codec",
@@ -12720,7 +12768,7 @@ dependencies = [
 name = "pallet-parameters"
 version = "0.1.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13025,7 +13073,7 @@ dependencies = [
 name = "pallet-safe-mode"
 version = "9.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13073,7 +13121,7 @@ dependencies = [
 name = "pallet-scheduler"
 version = "29.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13314,7 +13362,7 @@ dependencies = [
 name = "pallet-sudo"
 version = "28.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13343,7 +13391,7 @@ dependencies = [
 name = "pallet-timestamp"
 version = "27.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13444,7 +13492,7 @@ dependencies = [
 name = "pallet-treasury"
 version = "27.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13464,7 +13512,7 @@ dependencies = [
 name = "pallet-tx-pause"
 version = "9.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -13659,7 +13707,7 @@ dependencies = [
 name = "parachain-template"
 version = "0.0.0"
 dependencies = [
- "docify",
+ "docify 0.2.9",
 ]
 
 [[package]]
@@ -13668,7 +13716,7 @@ version = "0.0.0"
 dependencies = [
  "clap 4.5.13",
  "color-print",
- "docify",
+ "docify 0.4.1",
  "futures",
  "jsonrpsee",
  "log",
@@ -13686,7 +13734,7 @@ name = "parachain-template-runtime"
 version = "0.0.0"
 dependencies = [
  "cumulus-pallet-parachain-system",
- "docify",
+ "docify 0.4.1",
  "hex-literal",
  "log",
  "pallet-parachain-template",
@@ -15431,7 +15479,7 @@ dependencies = [
  "cumulus-primitives-core",
  "cumulus-relay-chain-interface",
  "cumulus-test-runtime",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "frame-support",
@@ -16179,7 +16227,7 @@ dependencies = [
  "cumulus-pallet-parachain-system",
  "cumulus-pallet-weight-reclaim",
  "cumulus-primitives-proof-size-hostfunction",
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-executive",
  "frame-metadata-hash-extension",
@@ -16273,7 +16321,7 @@ dependencies = [
 name = "polkadot-sdk-docs-first-pallet"
 version = "0.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "parity-scale-codec",
  "polkadot-sdk-frame",
  "scale-info",
@@ -16283,7 +16331,7 @@ dependencies = [
 name = "polkadot-sdk-docs-first-runtime"
 version = "0.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "pallet-balances",
  "pallet-sudo",
  "pallet-timestamp",
@@ -16302,7 +16350,7 @@ dependencies = [
 name = "polkadot-sdk-frame"
 version = "0.1.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "frame-benchmarking",
  "frame-executive",
  "frame-support",
@@ -19107,7 +19155,7 @@ version = "28.0.0"
 dependencies = [
  "array-bytes",
  "clap 4.5.13",
- "docify",
+ "docify 0.4.1",
  "log",
  "memmap2 0.9.3",
  "parity-scale-codec",
@@ -22171,7 +22219,7 @@ dependencies = [
 name = "sp-api"
 version = "26.0.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "hash-db",
  "log",
  "parity-scale-codec",
@@ -22320,7 +22368,7 @@ name = "sp-arithmetic"
 version = "23.0.0"
 dependencies = [
  "criterion",
- "docify",
+ "docify 0.4.1",
  "integer-sqrt",
  "num-traits",
  "parity-scale-codec",
@@ -22338,7 +22386,7 @@ version = "26.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "46d0d0a4c591c421d3231ddd5e27d828618c24456d51445d21a1f79fcee97c23"
 dependencies = [
- "docify",
+ "docify 0.2.9",
  "integer-sqrt",
  "num-traits",
  "parity-scale-codec",
@@ -22943,7 +22991,7 @@ name = "sp-io"
 version = "30.0.0"
 dependencies = [
  "bytes",
- "docify",
+ "docify 0.4.1",
  "ed25519-dalek",
  "libsecp256k1",
  "log",
@@ -23195,7 +23243,7 @@ name = "sp-runtime"
 version = "31.0.1"
 dependencies = [
  "binary-merkle-tree",
- "docify",
+ "docify 0.4.1",
  "either",
  "hash256-std-hasher",
  "impl-trait-for-tuples",
@@ -23230,7 +23278,7 @@ version = "36.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a6b85cb874b78ebb17307a910fc27edf259a0455ac5155d87eaed8754c037e07"
 dependencies = [
- "docify",
+ "docify 0.2.9",
  "either",
  "hash256-std-hasher",
  "impl-trait-for-tuples",
@@ -23255,7 +23303,7 @@ version = "37.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1c2a6148bf0ba74999ecfea9b4c1ade544f0663e0baba19630bb7761b2142b19"
 dependencies = [
- "docify",
+ "docify 0.2.9",
  "either",
  "hash256-std-hasher",
  "impl-trait-for-tuples",
@@ -24178,7 +24226,7 @@ version = "1.6.1"
 dependencies = [
  "clap 4.5.13",
  "cmd_lib",
- "docify",
+ "docify 0.4.1",
  "log",
  "sc-chain-spec",
  "serde",
@@ -24610,7 +24658,7 @@ name = "substrate-frame-rpc-system"
 version = "28.0.0"
 dependencies = [
  "assert_matches",
- "docify",
+ "docify 0.4.1",
  "frame-system-rpc-runtime-api",
  "futures",
  "jsonrpsee",
@@ -28066,7 +28114,7 @@ dependencies = [
 name = "xcm-docs"
 version = "0.1.0"
 dependencies = [
- "docify",
+ "docify 0.4.1",
  "pallet-balances",
  "pallet-message-queue",
  "pallet-xcm",
